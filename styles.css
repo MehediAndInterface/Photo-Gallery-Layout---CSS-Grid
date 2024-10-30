@@ -1,0 +1,51 @@
+/* Gallery Container */
+.gallery {
+    column-count: 3; /* Number of columns in the gallery */
+    column-gap: 15px; /* Spacing between columns */
+    padding: 20px;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    margin-bottom: 15px; /* Space between items in the same column */
+    display: inline-block;
+    max-width: 100%; /* Ensures items take full column width */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Default - Larger Screens */
+.gallery {
+    column-count: 3;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .gallery {
+        column-count: 1;
+    }
+}
